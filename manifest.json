@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Ghostfill - Local Form Vault",
+  "version": "1.0.0",
+  "description": "Local-first, zero-knowledge form auto-filler.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
